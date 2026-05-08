@@ -12,7 +12,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       async authorize(credentials) {
         // Hardcoded demo login
         if (credentials.email === 'demo@clinic.com' && credentials.password === 'password') {
-          return { id: '1', name: 'Dr. Brian Bai', email: 'demo@clinic.com' };
+          return { id: '1', name: 'Dr. Sarah Chen', email: 'demo@clinic.com' };
         }
         return null;
       },

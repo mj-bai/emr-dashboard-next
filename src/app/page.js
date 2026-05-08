@@ -150,8 +150,24 @@ export default async function GlobalDashboard() {
                                             <div className="card-header">
                                                 <div>
                                                     <div className="card-title" style={{ fontSize: '0.9rem' }}>{msg.subject}</div>
-                                                    <div className="item-sub" style={{ display: 'flex', justifyContent: 'space-between' }}>
-                                                        <span>Patient: <Link href={`/patients/${msg.patient_id}`}>{msg.last_name}, {msg.first_name}</Link></span>
+                                                    <div className="item-sub" style={{ display: 'flex', justifyContent: 'space-between', marginTop: '0.25rem' }}>
+                                                        <Link href={`/patients/${msg.patient_id}`} style={{ 
+                                                            fontSize: '0.85rem',
+                                                            backgroundColor: 'var(--primary-light)',
+                                                            color: 'var(--primary-dark)',
+                                                            padding: '0.35rem 0.85rem',
+                                                            borderRadius: 'var(--radius-full)',
+                                                            textDecoration: 'none',
+                                                            fontWeight: 600,
+                                                            border: '1px solid var(--primary-color)',
+                                                            display: 'inline-flex',
+                                                            alignItems: 'center',
+                                                            gap: '0.25rem',
+                                                            whiteSpace: 'nowrap'
+                                                        }}>
+                                                            <span className="material-symbols-outlined" style={{fontSize: '1rem'}}>person</span>
+                                                            {msg.last_name}, {msg.first_name}
+                                                        </Link>
                                                     </div>
                                                 </div>
                                             </div>

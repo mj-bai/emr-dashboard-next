@@ -18,7 +18,7 @@ export default function NewPatientPage() {
         insuranceProvider: '',
         insuranceId: '',
         insuranceGroup: '',
-        pcp: 'Dr. Brian Bai'
+        pcp: 'Dr. Sarah Chen'
     });
 
     const handleChange = (e) => {

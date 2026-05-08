@@ -5,7 +5,7 @@ import Link from 'next/link';
 import CalendarView from './CalendarView';
 
 export default function AppointmentsDashboard({ allAppointments }) {
-    const [viewMode, setViewMode] = useState('list'); // 'list' or 'calendar'
+    const [viewMode, setViewMode] = useState('calendar'); // 'list' or 'calendar'
 
     return (
         <main className="dashboard-area" style={{ maxWidth: '1200px', margin: '0 auto', width: '100%' }}>

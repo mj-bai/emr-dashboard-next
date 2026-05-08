@@ -79,21 +79,27 @@ export default async function InboxPage() {
                                             <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{formatDate(msg.date)}</span>
                                         </div>
 
-                                        <div style={{ display: 'flex', flexDirection: 'column' }}>
-                                            <span style={{ fontWeight: !msg.read ? 600 : 500, color: 'var(--text-main)', fontSize: '0.95rem' }}>{msg.subject}</span>
+                                        <div style={{ display: 'flex', flexDirection: 'column', minWidth: 0 }}>
+                                            <span style={{ fontWeight: !msg.read ? 600 : 500, color: 'var(--text-main)', fontSize: '0.95rem', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{msg.subject}</span>
                                             <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{msg.preview}</span>
                                         </div>
 
                                         <div style={{ textAlign: 'right', display: 'flex', alignItems: 'center', gap: '1rem' }}>
                                             <Link href={`/patients/${msg.patient_id}`} style={{ 
-                                                fontSize: '0.8rem', 
-                                                backgroundColor: 'var(--bg-main)', 
-                                                padding: '0.25rem 0.75rem', 
+                                                fontSize: '0.85rem', 
+                                                backgroundColor: 'var(--primary-light)', 
+                                                padding: '0.35rem 0.85rem', 
                                                 borderRadius: 'var(--radius-full)', 
-                                                color: 'var(--text-main)',
+                                                color: 'var(--primary-dark)',
                                                 textDecoration: 'none',
-                                                border: '1px solid var(--border-color)'
+                                                border: '1px solid var(--primary-color)',
+                                                fontWeight: 600,
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                gap: '0.25rem',
+                                                whiteSpace: 'nowrap'
                                             }}>
+                                                <span className="material-symbols-outlined" style={{fontSize: '1rem'}}>person</span>
                                                 {msg.last_name}, {msg.first_name}
                                             </Link>
                                             <button className="btn-icon"><span className="material-symbols-outlined">more_vert</span></button>

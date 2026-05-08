@@ -16,7 +16,7 @@ export default function Sidebar() {
         <aside className="sidebar">
             <div className="sidebar-brand">
                 <span className="material-symbols-outlined brand-icon">health_and_safety</span>
-                <span className="brand-text">Brian Bai Clinic</span>
+                <span className="brand-text">BB Clinic</span>
             </div>
             <nav className="sidebar-nav">
                 <Link href="/" className={`nav-item ${pathname === '/' ? 'active' : ''}`} style={{textDecoration: 'none'}}>
